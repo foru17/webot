@@ -12,7 +12,6 @@ const FT_PUSH_API = 'https://sc.ftqq.com/' + FT_PUSH_CONFIG.token + '.send'
 const GOOGLE_CONFIG = WEBOT_CONFIG.google_config
 const GOOGLE_API = GOOGLE_CONFIG.url
 
-
 let FT_PUSH = (text, desp) => {
 	request
 		.get(FT_PUSH_API + '?text=' + text + '&desp=' + desp)
