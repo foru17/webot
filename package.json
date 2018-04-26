@@ -1,0 +1,17 @@
+{
+  "name": "webot",
+  "version": "1.0.0",
+  "description": "luoleiorg wechat bot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ascii-art": "^1.4.3",
+    "qrcode-terminal": "^0.12.0",
+    "request": "^2.85.0",
+    "wechaty": "^0.14.1"
+  }
+}

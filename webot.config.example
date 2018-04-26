@@ -1,0 +1,10 @@
+module.exports = {
+	port: 2000,
+	ft_config: {
+		token: "",
+	},
+	google_config:{
+		cx:":ug5o-slkb3u",
+		url:"https://www.googleapis.com/customsearch/v1?key=AIzaSyCH-75wsendKEGawtx_wXutdwAUHa10g9g&cx=:ug5o-slkb3u&q="
+	}
+}
