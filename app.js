@@ -165,6 +165,7 @@ Webot.on('login', user => {
 					request(GOOGLE_API + encodeURIComponent(pulledWord), function(error, response, body) {
 						if (error) {
 							message.say('抱歉,我没找到你说的 ' + pulledWord + ',要不你换一个其他关键字再试试?');
+							return;
 						}
 						let gResult = JSON.parse(body);
 						console.log(body)
