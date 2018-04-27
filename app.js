@@ -14,7 +14,8 @@ const GOOGLE_CONFIG = WEBOT_CONFIG.google_config
 const GOOGLE_API = GOOGLE_CONFIG.url
 const QCLOUD_CONFIG = WEBOT_CONFIG.qcloud_config
 const Capi = require('qcloudapi-sdk')
-
+const path = require('path')
+const FUN_IMAGE_FILE = path.join(__dirname,'assets','FUN.jpg')
 // const SHOWAPI_CONFIG = WEBOT_CONFIG.showapi_config
 
 const capi = new Capi({
@@ -101,7 +102,10 @@ Webot.on('login', user => {
 		} else {
 			console.log(`Contact: ${contact.name()} Content: ${content}`)
 		}
-
+		if (isMatchedKey(['群主', '终极','答案'], content) || isMatchedKey(['罗磊', '终极','答案'], content)) {
+			await message.say(new MediaMessage(FUN_IMAGE_FILE))
+			return
+		}
 		if (content === '加群') {
 			let keyroom = await Room.find({
 				topic: '左罗·旅行·摄影·交流'
